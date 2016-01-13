@@ -1,0 +1,8 @@
+SayHelloIntent say hello
+SayHelloIntent say hi
+GetToTheChoppahIntent where we should go
+GetToTheChoppahIntent where do we go
+WhoAmIIntent who he is
+WhoAmIIntent what are you
+WhoAmIIntent who he is
+WhoAmIIntent what he is

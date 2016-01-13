@@ -1,0 +1,19 @@
+{
+  "name": "alexa-ask-arnold",
+  "version": "1.0.0",
+  "description": "Have Alexa ask Arnold advice about things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radiantnode/alexa-ask-arnold.git"
+  },
+  "author": "Michael Simmons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radiantnode/alexa-ask-arnold/issues"
+  },
+  "homepage": "https://github.com/radiantnode/alexa-ask-arnold#readme",
+}
