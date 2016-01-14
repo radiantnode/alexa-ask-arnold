@@ -9,7 +9,7 @@ var AlexaSkill = require('./lib/AlexaSkill');
 var sounds = require('./lib/sounds');
 
 var AlexaAskArnoldSkill = function () {
-  AlexaSkill.call(this, config.app_id);
+  AlexaSkill.call(this, 'amzn1.echo-sdk-ams.app.9004601b-dea6-43c5-945a-382722663ad1');
 };
 
 console.log(sounds.MISC[6][0])
@@ -28,7 +28,7 @@ AlexaAskArnoldSkill.prototype.eventHandlers.onLaunch = function (launchRequest, 
 AlexaAskArnoldSkill.prototype.intentHandlers = {
   SayHelloIntent: function (intent, session, response) {
     var picked = pickRandom(sounds.GREETINGS);
-    response.tell('<audio src="' + picked[0] + '" />');
+    playAudioResponse(response, picked);
   },
 
   GetToTheChoppahIntent: function (intent, session, response) {
@@ -48,6 +48,13 @@ AlexaAskArnoldSkill.prototype.intentHandlers = {
   }
 
 };
+
+function playAudioResponse (response, audio_url) {
+  response.tell({
+    speech: '<audio src="' + audio_url + '" />',
+    type: AlexaSkill.speechOutputType.SSML
+  });
+}
 
 function pickRandom (list) {
   return list[Math.floor(Math.random()*list.length)]
